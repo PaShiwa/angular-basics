@@ -1,0 +1,68 @@
+<h2>Directives in Angular...</h2>
+
+<div class="row">
+  <div class="col-3">
+    <button
+      type="button"
+      (click)="changeDirective('Component')"
+      class="btn"
+      [ngClass]="
+        currentDirective == 'Component' ? 'btn-success' : 'btn-primary'
+      "
+    >
+      Component
+    </button>
+  </div>
+
+  <div class="col-3">
+    <button
+      type="button"
+      (click)="changeDirective('Attribute')"
+      class="btn"
+      [ngClass]="
+        currentDirective == 'Attribute' ? 'btn-success' : 'btn-primary'
+      "
+    >
+      Attribute
+    </button>
+  </div>
+
+  <div class="col-3">
+    <button
+      type="button"
+      (click)="changeDirective('Structural')"
+      class="btn"
+      [ngClass]="
+        currentDirective == 'Structural' ? 'btn-success' : 'btn-primary'
+      "
+    >
+      Structural
+    </button>
+  </div>
+</div>
+
+<div class="row">
+  @if(currentDirective == "Component"){
+  <div class="col-12">
+    <p>This is a component directive! I am unique as I have my own html....</p>
+  </div>
+  }
+
+  <div class="col-12">
+    @if(currentDirective == 'Attribute'){
+    <p>
+      This is a attribute directive! I change the appearance using ngClass,
+      ngStyle....
+    </p>
+
+    }
+  </div>
+  <div class="col-12">
+    @if(currentDirective == 'Structural'){
+    <p>
+      This is a structural directive! I change the behavior using if, for and
+      switch....
+    </p>
+    }
+  </div>
+</div>
