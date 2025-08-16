@@ -1,0 +1,50 @@
+<p>Data Binding in Angular!</p>
+<ol>
+  <li>Interpolation</li>
+  <li>Property Binding</li>
+  <li>Event Binding</li>
+  <li>Two-way Data Binding</li>
+</ol>
+
+<!--Interpolation exmaple -->
+<div class="row">
+  <div class="col-4">
+    <p>{{ firstName }}</p>
+  </div>
+  <div class="col-4">
+    <p>{{ angularVersion }}</p>
+  </div>
+</div>
+
+<!--Property Binding exmaple -->
+<div class="row">
+  <div class="col-9">
+    <p [innerText]="currentDate"></p>
+  </div>
+</div>
+
+<!--Two way data binding with ngModel exmaple -->
+<div class="row">
+  <div class="col-3">
+    <select [(ngModel)]="selectedCountry">
+      <option value="US">USA</option>
+      <option value="CA">Canada</option>
+    </select>
+  </div>
+  <div>The selected country is: {{ selectedCountry }}</div>
+</div>
+<br />
+
+<!--Event Binding-->
+<div class="row">
+  <div class="col-3">
+    <button class="btn btn-success" (click)="showWelcomeAlert()">
+      Show Alert
+    </button>
+  </div>
+  <div class="col-3">
+    <button class="btn btn-success" (click)="showMessage('Welcome home!')">
+      Message
+    </button>
+  </div>
+</div>
